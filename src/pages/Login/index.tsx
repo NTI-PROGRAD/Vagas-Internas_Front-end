@@ -1,7 +1,9 @@
+import "./style.scss";
+
 function Login()
 {
   return (
-    <div className="Login">
+    <div className="login-page">
       <h1>Login</h1>      
     </div>
   );
