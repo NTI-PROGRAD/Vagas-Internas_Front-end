@@ -15,6 +15,6 @@ $fonts-weights: (
     font-family: "Saira Condensed";
     src: url("src/assets/fonts/saira-condensed/SairaCondensed-#{$weight-name}.ttf");
     font-style: normal;
-    font-weight: #{weight-score};
+    font-weight: #{$weight-score};
   }
 }
