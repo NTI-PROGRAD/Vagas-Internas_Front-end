@@ -1,3 +1,6 @@
+/* Fonts */
+@use "./sass/font-loader.scss";
+
 /* Reset */
 * {
   margin: 0;
@@ -6,7 +9,7 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: "Barlow Condensed";
 }
 
 /* App */
