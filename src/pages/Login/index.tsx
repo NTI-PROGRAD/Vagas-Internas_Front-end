@@ -15,22 +15,24 @@ function Login()
 
         <h2 className="login-title">Vagas Internas</h2>
 
-        <input
-          className="login"
-          type="text"
-          placeholder="Login"
-          value={login}
-          onChange={(e,) => setLogin(e.target.value,)}
-        />
-        <input
-          className="password"
-          type="password"
-          placeholder="Senha"
-          value={password}
-          onChange={(e,) => setPassword(e.target.value,)}
-        />
+        <form>
+          <input
+            className="login"
+            type="text"
+            placeholder="Login"
+            value={login}
+            onChange={(e,) => setLogin(e.target.value,)}
+          />
+          <input
+            className="password"
+            type="password"
+            placeholder="Senha"
+            value={password}
+            onChange={(e,) => setPassword(e.target.value,)}
+          />
 
-        <button className="login-button">Efetuar Login</button>
+          <button className="login-button" onClick={makeLogin}>Efetuar Login</button>
+        </form>
       </div>
     </div>
   );
