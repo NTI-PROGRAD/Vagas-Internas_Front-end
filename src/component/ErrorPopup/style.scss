@@ -1,0 +1,71 @@
+@use "../../sass/colors.scss" as *;
+
+div.error-popup
+{
+  position: absolute;
+  top: 1rem;
+
+  width: 100%;
+  max-width: 600px;
+
+  background-color: map-get($colors, "Clouds");
+
+  border-radius: 4px;
+
+  display: grid;
+  grid-template-columns: 60px 4fr 1fr;
+
+  div.image-container
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  div.content-error-message
+  {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+
+    h2
+    {
+      color: map-get($colors, "Red");
+      font-family: "Saira Condensed";
+      font-weight: 600;
+    }
+
+    h4
+    {
+      font-family: "Saira Condensed";
+      font-weight: 500;
+    }
+  }
+
+  button.close-popup
+  {
+    border: none;
+    background-color: adjust-color(map-get($colors, "Red"), $lightness: 45%);
+    cursor: pointer;
+
+    &:hover 
+    {
+      transition: .35s ease-in-out all;
+      background-color: adjust-color(map-get($colors, "Red"), $lightness: 35%);
+    }
+  }
+
+  div.strip-line
+  {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    height: 5px;
+
+    div.filled-part
+    {
+      background-color: map-get($colors, "Red");
+      width: 45%;
+      height: 100%;
+    }
+  }
+}
