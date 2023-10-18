@@ -9,6 +9,7 @@ div.error-popup
   max-width: 600px;
 
   background-color: map-get($colors, "Clouds");
+  box-shadow: 4px 4px 15px 1px rgba(0, 0, 0, .35), -4px -4px 15px 1px rgba(0, 0, 0, .35);
 
   border-radius: 4px;
 
