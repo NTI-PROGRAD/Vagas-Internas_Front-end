@@ -12,6 +12,7 @@ function Login()
 
   const [login, setLogin,] = useState<string>("",);
   const [password, setPassword,] = useState<string>("",);
+  const [firstRender, setFirstRender,] = useState<boolean>(true,);
 
   async function makeLogin(event: FormEvent<HTMLFormElement | EventTarget>,)
   {
@@ -39,7 +40,12 @@ function Login()
     if (validAuthentication) navigator("/home",);
   }, [navigator,],);
 
-  useEffect(() => { checkAuthentication(); }, [checkAuthentication,],);
+  useEffect(() => {
+    
+    if (firstRender) setFirstRender(false,);
+    else checkAuthentication();
+    
+  }, [checkAuthentication,],);
 
   return (
     <div className="login-page">
